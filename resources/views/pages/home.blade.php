@@ -200,7 +200,7 @@
             </div>
             <div class="rounded-[2rem] border border-espresso/10 bg-white p-8 reveal sm:p-10">
                 <p class="eyebrow">A note for this student project</p>
-                <p class="mt-5 text-lg leading-8 text-espresso/70">Replace demo product names, prices, reviews, and images with verified information from the actual store before presenting the page as an official business website.</p>
+                <p class="mt-5 text-lg leading-8 text-espresso/70">Photos on this page are real Badong Footwear products. Product names, prices, and reviews are still illustrative — verify them with the actual store before presenting this page as an official business website.</p>
             </div>
         </div>
     </section>
