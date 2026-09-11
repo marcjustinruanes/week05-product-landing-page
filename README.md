@@ -238,28 +238,23 @@ The historical and factual details used to replace generic placeholder copy (fou
 
 ## Product Photography
 
-The product and category images are **real photographs**, not the stylized SVG illustrations the starter kit shipped with. Two sources are mixed here:
+Every product and category image on the page is a **genuine Badong Footwear photo** — no stock photography or illustrations remain. Three real photos (visible "BADONG GENUINE LEATHER" branding on the insoles), supplied directly by the project owner from their own saved photos of the shop's products, are reused across every image slot the page needs:
 
-**Genuine Badong Footwear photos** — the hero image, the Heritage Sandal product, and the Sandals/Heritage Styles category tiles now use real photos of actual Badong Footwear stock (visible "BADONG GENUINE LEATHER" branding on the insoles), supplied directly by the project owner from their own saved photos of the shop's products.
+| File(s) | Subject |
+|---|---|
+| `shoe-3.jpg`, `hero-shoe.jpg`, `category-heritage.jpg` | Brown Badong Footwear leather slide sandal |
+| `shoe-1.jpg`, `category-slippers.jpg`, `category-casual.jpg` | Black Badong Footwear leather slide sandal |
+| `shoe-2.jpg`, `category-sandals.jpg` | Embellished Badong Footwear sandal (promotional shot) |
 
-| File | Subject | Source |
-|---|---|---|
-| `shoe-3.jpg`, `hero-shoe.jpg`, `category-heritage.jpg` | Real Badong Footwear leather slide sandals (brown/black) | Supplied by the project owner |
-| `category-sandals.jpg` | Real Badong Footwear embellished sandal (promotional shot) | Supplied by the project owner |
+Because only three real photos were available, they're deliberately reused across the hero image, all three featured products, and all four category tiles rather than mixed with unrelated stock photography — so the page shows exclusively real Badong Footwear inventory, even at the cost of visual repetition. Product names and categories (Liliw Slide, Signature Slide, Heritage Slide) were renamed to match what's actually photographed, rather than keeping placeholder names like "Leather Shoes" next to a sandal photo.
 
-**Stock photography** — for the products and categories no real photo was available for (slip-ons, dress shoes, slippers), freely-licensed stock photos of similar, unrelated footwear fill in as placeholders. Every candidate was checked by hand first; several early picks were rejected because they turned out to be branded product photography for other shoe companies (Barker, Grant Stone, Helmsman) visible on the insole.
-
-| File | Subject | Photographer | Source | License |
-|---|---|---|---|---|
-| `shoe-1.jpg`, `category-casual.jpg` | Brown leather lace-up boots | Bruno Nascimento | [Unsplash](https://unsplash.com/photos/person-wearing-brown-leather-shoes-xhthZII8yoE) | Unsplash License (free, commercial use OK) |
-| `shoe-2.jpg` | Brown derby leather dress shoes | Ch Th Jo | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mens_brown_derby_leather_shoes.jpg) | CC BY-SA 3.0 — **requires attribution** and share-alike on reuse |
-| `category-slippers.jpg` | Striped flip-flops | David Trinks | [Unsplash](https://unsplash.com/photos/a-pair-of-flip-flops-on-the-sand-glfcz6er-nA) | Unsplash License (free, commercial use OK) |
+An earlier pass used freely-licensed stock photography (Unsplash, Wikimedia Commons) for the products no real photo existed for yet. That stock imagery — and the "reuse Badong photos everywhere" decision above — was removed entirely at the project owner's request in favor of exclusively real photos, even where that means the same photo appears more than once.
 
 Testimonial avatars (`avatar-1.svg`, `avatar-2.svg`, `avatar-3.svg`) were deliberately **kept as abstract icons**, not swapped for real people's stock photos — the testimonial quotes are fictional placeholder content, and pairing them with a real photographed person's face would misrepresent that individual as a genuine reviewer.
 
 ## Important Content Note
 
-Product names, exact prices, and testimonials on this page are **illustrative example content** for this school project, not verified, official information from Badong Footwear. The Heritage Sandal photo, hero image, and two category tiles are now real Badong Footwear product photos — but the names, prices, and "made-to-order" copy paired with them are still this project's own placeholder text, not confirmed against the shop's actual listings. Before presenting this page as the shop's real website, verify product names and prices directly with Badong Footwear, and obtain real customer testimonials with permission.
+Product names, exact prices, and testimonials on this page are **illustrative example content** for this school project, not verified, official information from Badong Footwear. Every product/category photo on the page is now a real Badong Footwear photo — but the names, prices, and "made-to-order" copy paired with them are still this project's own placeholder text, not confirmed against the shop's actual listings. Before presenting this page as the shop's real website, verify product names and prices directly with Badong Footwear, and obtain real customer testimonials with permission.
 
 ---
 

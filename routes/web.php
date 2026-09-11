@@ -5,24 +5,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $products = [
         [
-            'name' => 'Liliw Slip-On',
-            'description' => 'A handmade slip-on built the same way Badong has made everyday pairs since 1962.',
+            'name' => 'Liliw Slide',
+            'description' => 'A handmade slide sandal built the same way Badong has made everyday pairs since 1962.',
             'price' => '₱350',
-            'category' => 'Slip-Ons',
+            'category' => 'Slides',
             'image' => '/images/shoe-1.jpg',
             'badge' => 'Featured',
         ],
         [
-            'name' => 'Gat Tayaw Leather',
-            'description' => 'A leather pair made from locally sourced materials, finished with imported buckle hardware.',
+            'name' => 'Signature Slide',
+            'description' => 'A dressed-up statement slide from Badong\'s sandal collection, finished with embellished detailing.',
             'price' => '₱550',
-            'category' => 'Leather Shoes',
+            'category' => 'Signature',
             'image' => '/images/shoe-2.jpg',
             'badge' => 'Popular',
         ],
         [
-            'name' => 'Heritage Sandal',
-            'description' => 'A made-to-order sandal in the tradition Badong is known for exporting abroad.',
+            'name' => 'Heritage Slide',
+            'description' => 'A made-to-order slide sandal in the tradition Badong is known for exporting abroad.',
             'price' => '₱650',
             'category' => 'Sandals',
             'image' => '/images/shoe-3.jpg',
@@ -53,8 +53,8 @@ Route::get('/', function () {
     ];
 
     $plans = [
-        ['name' => 'Everyday', 'eyebrow' => 'For daily essentials', 'price' => 'From ₱350', 'features' => ['Everyday slip-ons', 'Slippers and casual styles', 'Comfort-focused picks'], 'featured' => false],
-        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱550', 'features' => ['Leather shoes', 'Locally sourced materials', 'Imported hardware finishing'], 'featured' => true],
+        ['name' => 'Everyday', 'eyebrow' => 'For daily essentials', 'price' => 'From ₱350', 'features' => ['Everyday slides', 'Slippers and casual styles', 'Comfort-focused picks'], 'featured' => false],
+        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱550', 'features' => ['Statement slides', 'Locally sourced materials', 'Embellished detailing'], 'featured' => true],
         ['name' => 'Heritage', 'eyebrow' => 'For timeless character', 'price' => 'From ₱650', 'features' => ['Made-to-order sandals', 'Export-grade craftsmanship', 'Since 1962 on Gat Tayaw Street'], 'featured' => false],
     ];
 
