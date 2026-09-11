@@ -6,25 +6,25 @@ Route::get('/', function () {
     $products = [
         [
             'name' => 'Liliw Tsinelas',
-            'description' => 'A handmade everyday tsinelas built the same way Badong has made pairs since 1962.',
+            'description' => 'A handmade pair of leather slippers, built the same way Badong has made pairs since 1962.',
             'price' => '₱150',
-            'category' => 'Tsinelas',
+            'category' => 'Leather Slippers',
             'image' => '/images/shoe-1.jpg',
             'badge' => 'Featured',
         ],
         [
-            'name' => 'Fiesta Slide',
-            'description' => 'A dressed-up statement slide from Badong\'s sandal collection, finished with embellished detailing.',
+            'name' => 'Fiesta Slippers',
+            'description' => 'A dressed-up pair of leather slippers from Badong\'s collection, finished with embellished detailing.',
             'price' => '₱280',
-            'category' => 'Dress Sandals',
+            'category' => 'Leather Slippers',
             'image' => '/images/shoe-2.jpg',
             'badge' => 'Popular',
         ],
         [
             'name' => "Founder's Original",
-            'description' => 'A made-to-order slide sandal in the tradition Badong is known for exporting abroad.',
+            'description' => 'A made-to-order pair of leather slippers in the tradition Badong is known for exporting abroad.',
             'price' => '₱220',
-            'category' => 'Heritage',
+            'category' => 'Leather Slippers',
             'image' => '/images/shoe-3.jpg',
             'badge' => 'Signature',
         ],
@@ -40,10 +40,10 @@ Route::get('/', function () {
     ];
 
     $categories = [
-        ['name' => 'Sandals', 'image' => '/images/category-sandals.jpg'],
-        ['name' => 'Slippers', 'image' => '/images/category-slippers.jpg'],
-        ['name' => 'Casual Footwear', 'image' => '/images/category-casual.jpg'],
-        ['name' => 'Heritage Styles', 'image' => '/images/category-heritage.jpg'],
+        ['name' => 'Embellished Slippers', 'image' => '/images/category-sandals.jpg'],
+        ['name' => 'Everyday Slippers', 'image' => '/images/category-slippers.jpg'],
+        ['name' => 'Casual Leather Slippers', 'image' => '/images/category-casual.jpg'],
+        ['name' => 'Heritage Slippers', 'image' => '/images/category-heritage.jpg'],
     ];
 
     $testimonials = [
@@ -53,9 +53,9 @@ Route::get('/', function () {
     ];
 
     $plans = [
-        ['name' => 'Everyday', 'eyebrow' => 'For daily essentials', 'price' => 'From ₱150', 'features' => ['Everyday tsinelas', 'Slippers and casual styles', 'Comfort-focused picks'], 'featured' => false],
-        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱280', 'features' => ['Statement slides', 'Locally sourced materials', 'Embellished detailing'], 'featured' => true],
-        ['name' => 'Heritage', 'eyebrow' => 'For timeless character', 'price' => 'From ₱220', 'features' => ['Made-to-order sandals', 'Export-grade craftsmanship', 'Since 1962 on Gat Tayaw Street'], 'featured' => false],
+        ['name' => 'Everyday', 'eyebrow' => 'For daily essentials', 'price' => 'From ₱150', 'features' => ['Everyday leather slippers', 'Comfort-focused picks', 'Handmade since 1962'], 'featured' => false],
+        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱280', 'features' => ['Embellished leather slippers', 'Locally sourced materials', 'Statement detailing'], 'featured' => true],
+        ['name' => 'Heritage', 'eyebrow' => 'For timeless character', 'price' => 'From ₱220', 'features' => ['Made-to-order leather slippers', 'Export-grade craftsmanship', 'Since 1962 on Gat Tayaw Street'], 'featured' => false],
     ];
 
     return view('pages.home', compact('products', 'features', 'categories', 'testimonials', 'plans'));
