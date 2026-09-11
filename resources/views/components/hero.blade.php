@@ -34,7 +34,7 @@
 
         <div class="relative reveal hero-product">
             <div class="hero-card">
-                <img src="/images/hero-shoe.jpg" alt="Pair of handmade brown leather shoes" class="h-full w-full object-cover">
+                <img src="/images/hero-shoe.jpg" alt="Real Badong Footwear brown leather slide sandal" class="h-full w-full object-cover">
             </div>
             <div class="floating-note floating-note-top">
                 <span class="floating-icon">01</span>
