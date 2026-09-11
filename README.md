@@ -215,6 +215,7 @@ To satisfy this requirement with real evidence of your own iteration, once you c
 | Leftover unused font plugin in `vite.config.js` | The default Laravel scaffold's `vite.config.js` referenced a Bunny Fonts plugin for a font the design doesn't use (the real design loads DM Sans/Playfair Display via Google Fonts in `app.css`). Removed the unused plugin and rebuilt. |
 | Automated screenshots showed most sections blank | The page uses an `IntersectionObserver`-driven `.reveal` scroll animation (sections start at `opacity: 0` until scrolled into view). A synthetic scroll didn't reliably trigger every element in time for the screenshot. Fixed by having the screenshot script force the `visible` class after scrolling through the page — the same end state a real visitor reaches by scrolling. |
 | Required nav items (Features, Pricing, Testimonials, Sign In, Get Started) were missing | The starter kit's navbar used different labels (Collection, About, Craftsmanship, Stories) and a single CTA button. Updated the navbar to include the required links and both a Sign In and Get Started button. |
+| Product images were abstract SVG illustrations, not real photos | Replaced with real, freely-licensed footwear photography (see [Product Photography](#product-photography)). Several first-choice stock photos had to be discarded after visual inspection revealed a competing shoe brand's name printed on the insole (Barker, Grant Stone, Helmsman) — using those would have put another company's branding on Badong's page. |
 | Rubric asks for SaaS-style CTAs (Register / Contact Sales / Start Free Trial) on a physical retail shop | Adapted rather than forced: "Contact Sales" is genuinely appropriate (Badong does wholesale/export business), "Register" became "Create an Account," and "Start Free Trial" — which has no equivalent for a shoe shop — became "Visit Us in Liliw," since visiting and trying shoes on is the retail equivalent of a trial. |
 
 ---
@@ -235,9 +236,22 @@ The historical and factual details used to replace generic placeholder copy (fou
 - [Manila Shopper: Footwear Shopping in Liliw, Laguna](https://www.manilashopper.com/2012/04/footwear-shopping-at-liliw-laguna.html)
 - [Badong Footwear on Facebook](https://www.facebook.com/badongfootwear/)
 
+## Product Photography
+
+The product and category images are **real photographs**, not the stylized SVG illustrations the starter kit shipped with — but they are stock/freely-licensed photography of similar footwear, not verified photos of Badong Footwear's own actual inventory (I have no legitimate way to obtain and redistribute the shop's own product photos without their permission). Every photo was checked by hand and any shot showing a visible competing brand name (several early candidates turned out to be branded product photography for other shoe companies) was rejected before use.
+
+| File | Subject | Photographer | Source | License |
+|---|---|---|---|---|
+| `shoe-1.jpg`, `hero-shoe.jpg`, `category-casual.jpg` | Brown leather lace-up boots | Bruno Nascimento | [Unsplash](https://unsplash.com/photos/person-wearing-brown-leather-shoes-xhthZII8yoE) | Unsplash License (free, commercial use OK) |
+| `shoe-2.jpg`, `category-heritage.jpg` | Brown derby leather dress shoes | Ch Th Jo | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Mens_brown_derby_leather_shoes.jpg) | CC BY-SA 3.0 — **requires attribution** and share-alike on reuse |
+| `shoe-3.jpg`, `category-sandals.jpg` | Buckled leather sandals | Stephanie Hau | [Unsplash](https://unsplash.com/photos/black-and-brown-leather-sandals-on-green-grass-sNkpa8TLeFs) | Unsplash License (free, commercial use OK) |
+| `category-slippers.jpg` | Striped flip-flops | David Trinks | [Unsplash](https://unsplash.com/photos/a-pair-of-flip-flops-on-the-sand-glfcz6er-nA) | Unsplash License (free, commercial use OK) |
+
+Testimonial avatars (`avatar-1.svg`, `avatar-2.svg`, `avatar-3.svg`) were deliberately **kept as abstract icons**, not swapped for real people's stock photos — the testimonial quotes are fictional placeholder content, and pairing them with a real photographed person's face would misrepresent that individual as a genuine reviewer.
+
 ## Important Content Note
 
-Product names, exact prices, and testimonials on this page are **illustrative example content** for this school project, not verified, official information from Badong Footwear. Before presenting this page as the shop's real website, replace them with real product names, real prices, and real customer testimonials obtained with permission.
+Product names, exact prices, and testimonials on this page are **illustrative example content** for this school project, not verified, official information from Badong Footwear. Before presenting this page as the shop's real website, replace them with real product names, real prices, real product photos, and real customer testimonials obtained with permission.
 
 ---
 
