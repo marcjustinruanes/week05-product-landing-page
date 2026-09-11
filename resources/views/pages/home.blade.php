@@ -13,11 +13,11 @@
             <div class="grid gap-7 md:grid-cols-4 md:items-center">
                 <div class="md:col-span-2 reveal">
                     <p class="eyebrow">Rooted in Liliw</p>
-                    <h2 class="mt-3 max-w-2xl font-display text-3xl leading-tight sm:text-4xl">A local footwear story, carried forward.</h2>
+                    <h2 class="mt-3 max-w-2xl font-display text-3xl leading-tight sm:text-4xl">Founded 1962 by Salvador "Badong" Monteiro.</h2>
                 </div>
                 <div class="reveal">
-                    <p class="text-sm font-semibold text-espresso/70">Local craftsmanship</p>
-                    <p class="mt-1 text-sm text-espresso/55">Connected to Liliw's long-standing footwear culture.</p>
+                    <p class="text-sm font-semibold text-espresso/70">Gat Tayaw Street, Liliw</p>
+                    <p class="mt-1 text-sm text-espresso/55">Monteiro started the shop at age 16; it still stands on the same footwear strip today.</p>
                 </div>
                 <div class="reveal">
                     <p class="text-sm font-semibold text-espresso/70">Everyday comfort</p>
@@ -43,7 +43,7 @@
         </div>
     </section>
 
-    <section class="bg-espresso text-cream">
+    <section id="features" class="bg-espresso text-cream">
         <div class="shell section-pad">
             <div class="grid gap-8 lg:grid-cols-2 lg:items-end">
                 <div class="reveal">
@@ -86,11 +86,11 @@
                     <div class="max-w-xl">
                         <p class="eyebrow">Craftsmanship</p>
                         <h2 class="mt-4 font-display text-4xl leading-tight sm:text-5xl">Made with craft. Worn with pride.</h2>
-                        <p class="mt-6 leading-7 text-espresso/65">Badong's identity belongs to Liliw's footwear tradition. The landing page celebrates that local character through a modern, editorial presentation.</p>
+                        <p class="mt-6 leading-7 text-espresso/65">Badong has never chased mass production. Every pair is made to order using raw materials sourced from nearby Biñan, Laguna, with buckles and hardware brought in from Hong Kong and beyond.</p>
                         <div class="mt-8 space-y-5">
-                            <div class="flex gap-4"><span class="number-dot">01</span><div><h3 class="font-semibold">Thoughtful materials</h3><p class="mt-1 text-sm text-espresso/55">Keep product information clear and honest.</p></div></div>
-                            <div class="flex gap-4"><span class="number-dot">02</span><div><h3 class="font-semibold">Practical construction</h3><p class="mt-1 text-sm text-espresso/55">Footwear should fit real everyday routines.</p></div></div>
-                            <div class="flex gap-4"><span class="number-dot">03</span><div><h3 class="font-semibold">Local character</h3><p class="mt-1 text-sm text-espresso/55">A visual identity connected to Liliw.</p></div></div>
+                            <div class="flex gap-4"><span class="number-dot">01</span><div><h3 class="font-semibold">Local materials</h3><p class="mt-1 text-sm text-espresso/55">Raw materials sourced from Biñan, Laguna, shaped by hand in Liliw.</p></div></div>
+                            <div class="flex gap-4"><span class="number-dot">02</span><div><h3 class="font-semibold">Made to order</h3><p class="mt-1 text-sm text-espresso/55">No factory lines — quality over volume, pair by pair.</p></div></div>
+                            <div class="flex gap-4"><span class="number-dot">03</span><div><h3 class="font-semibold">Export heritage</h3><p class="mt-1 text-sm text-espresso/55">A history of shipping to Hong Kong, Singapore, Hawaii, and New York.</p></div></div>
                         </div>
                     </div>
                 </div>
@@ -114,9 +114,18 @@
 
                 <div class="reveal">
                     <p class="eyebrow">Featured pair</p>
-                    <h2 id="showcase-name" class="mt-3 font-display text-4xl sm:text-5xl">Liliw Classic</h2>
+                    <h2 id="showcase-name" class="mt-3 font-display text-4xl sm:text-5xl">Liliw Slip-On</h2>
                     <p class="mt-5 max-w-xl leading-7 text-espresso/60">A flexible presentation component that can later connect to real Laravel product data.</p>
-                    <div class="mt-7 flex items-center gap-3"><span class="text-2xl font-semibold">₱499</span><span class="badge">Featured</span></div>
+                    <div class="mt-7 flex items-center gap-3"><span class="text-2xl font-semibold">₱350</span><span class="badge">Featured</span></div>
+
+                    <div class="mt-8">
+                        <p class="text-sm font-semibold">Key highlights</p>
+                        <ul class="mt-3 space-y-2">
+                            <li class="flex gap-3 text-sm text-espresso/65"><span class="check">✓</span>Hand-cut from locally sourced materials</li>
+                            <li class="flex gap-3 text-sm text-espresso/65"><span class="check">✓</span>Made to order, never mass produced</li>
+                            <li class="flex gap-3 text-sm text-espresso/65"><span class="check">✓</span>Handmade on Gat Tayaw Street since 1962</li>
+                        </ul>
+                    </div>
 
                     <div class="mt-8">
                         <p class="text-sm font-semibold">Select size</p>
@@ -183,7 +192,11 @@
                 <p class="eyebrow text-tan">From Liliw, with every step</p>
                 <h2 class="mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-6xl">A footwear brand should feel like it belongs somewhere.</h2>
                 <p class="mt-6 max-w-2xl leading-7 text-cream/65">Badong is presented as a local story: rooted in Liliw, shaped by footwear culture, and brought forward through a modern digital experience.</p>
-                <a href="#contact" class="btn-light mt-8">Visit / Contact <span aria-hidden="true">↗</span></a>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <button class="btn-light" data-toast="Account creation is not part of this demo yet">Create an Account</button>
+                    <a href="#contact" class="btn-secondary border-cream/30 text-cream hover:border-cream/60">Contact Sales</a>
+                    <a href="#contact" class="btn-secondary border-cream/30 text-cream hover:border-cream/60">Visit Us in Liliw</a>
+                </div>
             </div>
             <div class="rounded-[2rem] border border-espresso/10 bg-white p-8 reveal sm:p-10">
                 <p class="eyebrow">A note for this student project</p>

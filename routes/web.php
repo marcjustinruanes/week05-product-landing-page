@@ -5,38 +5,38 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $products = [
         [
-            'name' => 'Liliw Classic',
-            'description' => 'A relaxed everyday silhouette inspired by local footwear culture.',
-            'price' => '₱499',
-            'category' => 'Everyday',
+            'name' => 'Liliw Slip-On',
+            'description' => 'A handmade slip-on built the same way Badong has made everyday pairs since 1962.',
+            'price' => '₱350',
+            'category' => 'Slip-Ons',
             'image' => '/images/shoe-1.svg',
             'badge' => 'Featured',
         ],
         [
-            'name' => 'Badong Comfort',
-            'description' => 'A clean, comfortable pair made for long days and easy styling.',
-            'price' => '₱599',
-            'category' => 'Comfort',
+            'name' => 'Gat Tayaw Leather',
+            'description' => 'A leather pair made from locally sourced materials, finished with imported buckle hardware.',
+            'price' => '₱550',
+            'category' => 'Leather Shoes',
             'image' => '/images/shoe-2.svg',
             'badge' => 'Popular',
         ],
         [
-            'name' => 'Heritage Pair',
-            'description' => 'A heritage-inspired style that brings Liliw character to every step.',
-            'price' => '₱699',
-            'category' => 'Heritage',
+            'name' => 'Heritage Sandal',
+            'description' => 'A made-to-order sandal in the tradition Badong is known for exporting abroad.',
+            'price' => '₱650',
+            'category' => 'Sandals',
             'image' => '/images/shoe-3.svg',
             'badge' => 'Signature',
         ],
     ];
 
     $features = [
-        ['icon' => 'craft', 'title' => 'Local Craftsmanship', 'description' => 'A footwear story deeply connected to Liliw, Laguna.'],
+        ['icon' => 'craft', 'title' => 'Handmade Since 1962', 'description' => 'Founded by Salvador "Badong" Monteiro on Gat Tayaw Street, Liliw.'],
         ['icon' => 'comfort', 'title' => 'Everyday Comfort', 'description' => 'Styles designed around practical, everyday wear.'],
-        ['icon' => 'quality', 'title' => 'Quality Materials', 'description' => 'Thoughtful materials and construction for daily use.'],
-        ['icon' => 'durability', 'title' => 'Built for Daily Life', 'description' => 'Reliable footwear made to move with you.'],
-        ['icon' => 'heritage', 'title' => 'Filipino Heritage', 'description' => 'A modern expression of local footwear culture.'],
-        ['icon' => 'liliw', 'title' => 'Rooted in Liliw', 'description' => 'Proudly connected to one of Laguna’s footwear destinations.'],
+        ['icon' => 'quality', 'title' => 'Quality Over Mass Production', 'description' => 'No factory lines — every pair is made to order, never mass produced.'],
+        ['icon' => 'durability', 'title' => 'Locally Sourced Materials', 'description' => 'Raw materials from nearby Biñan, Laguna, shaped by hand in Liliw.'],
+        ['icon' => 'heritage', 'title' => 'From Liliw to the World', 'description' => 'A local workshop with a history of exporting to Hong Kong, Singapore, Hawaii, and New York.'],
+        ['icon' => 'liliw', 'title' => 'Rooted in Liliw', 'description' => 'Proudly part of Gat Tayaw Street, one of Laguna’s footwear destinations.'],
     ];
 
     $categories = [
@@ -53,9 +53,9 @@ Route::get('/', function () {
     ];
 
     $plans = [
-        ['name' => 'Everyday', 'eyebrow' => 'For daily essentials', 'price' => 'From ₱499', 'features' => ['Everyday slippers', 'Casual styles', 'Comfort-focused picks'], 'featured' => false],
-        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱599', 'features' => ['Featured footwear', 'Popular styles', 'Versatile designs'], 'featured' => true],
-        ['name' => 'Heritage', 'eyebrow' => 'For timeless character', 'price' => 'From ₱699', 'features' => ['Heritage-inspired styles', 'Distinctive details', 'Premium presentation'], 'featured' => false],
+        ['name' => 'Everyday', 'eyebrow' => 'For daily essentials', 'price' => 'From ₱350', 'features' => ['Everyday slip-ons', 'Slippers and casual styles', 'Comfort-focused picks'], 'featured' => false],
+        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱550', 'features' => ['Leather shoes', 'Locally sourced materials', 'Imported hardware finishing'], 'featured' => true],
+        ['name' => 'Heritage', 'eyebrow' => 'For timeless character', 'price' => 'From ₱650', 'features' => ['Made-to-order sandals', 'Export-grade craftsmanship', 'Since 1962 on Gat Tayaw Street'], 'featured' => false],
     ];
 
     return view('pages.home', compact('products', 'features', 'categories', 'testimonials', 'plans'));

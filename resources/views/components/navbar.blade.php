@@ -7,10 +7,10 @@
 
         <div class="hidden items-center gap-7 lg:flex">
             <a href="#" class="nav-link">Home</a>
+            <a href="#features" class="nav-link">Features</a>
             <a href="#collection" class="nav-link">Collection</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#craftsmanship" class="nav-link">Craftsmanship</a>
-            <a href="#testimonials" class="nav-link">Stories</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
 
@@ -21,7 +21,8 @@
             <button class="nav-icon" aria-label="Shopping bag" data-toast="Your bag is empty">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 8.5h12l1 12H5l1-12Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
             </button>
-            <a href="#collection" class="btn-nav">Explore</a>
+            <button class="nav-link font-semibold" data-toast="Account sign-in is not part of this demo yet">Sign In</button>
+            <a href="#collection" class="btn-nav">Get Started</a>
         </div>
 
         <button id="menu-toggle" class="nav-icon lg:hidden" aria-label="Open menu" aria-expanded="false">
@@ -33,11 +34,15 @@
     <div id="mobile-menu" class="hidden border-t border-espresso/10 bg-cream/95 backdrop-blur-xl lg:hidden">
         <div class="shell flex flex-col gap-1 py-5">
             <a href="#" class="mobile-link">Home</a>
+            <a href="#features" class="mobile-link">Features</a>
             <a href="#collection" class="mobile-link">Collection</a>
-            <a href="#about" class="mobile-link">About</a>
-            <a href="#craftsmanship" class="mobile-link">Craftsmanship</a>
-            <a href="#testimonials" class="mobile-link">Stories</a>
+            <a href="#pricing" class="mobile-link">Pricing</a>
+            <a href="#testimonials" class="mobile-link">Testimonials</a>
             <a href="#contact" class="mobile-link">Contact</a>
+            <div class="mt-4 flex gap-3">
+                <button class="btn-secondary flex-1" data-toast="Account sign-in is not part of this demo yet">Sign In</button>
+                <a href="#collection" class="btn-primary flex-1">Get Started</a>
+            </div>
         </div>
     </div>
 </header>

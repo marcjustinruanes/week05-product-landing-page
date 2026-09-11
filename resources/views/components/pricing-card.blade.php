@@ -15,5 +15,5 @@
             </li>
         @endforeach
     </ul>
-    <a href="#collection" class="{{ $plan['featured'] ? 'btn-primary' : 'btn-secondary' }} mt-9 w-full justify-center">Explore <span>→</span></a>
+    <a href="#collection" class="{{ $plan['featured'] ? 'btn-primary' : 'btn-secondary' }} mt-9 w-full justify-center">Choose Collection <span>→</span></a>
 </div>
