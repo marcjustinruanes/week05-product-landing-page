@@ -80,7 +80,7 @@
         <div class="overflow-hidden rounded-[2rem] bg-sand">
             <div class="grid lg:grid-cols-2">
                 <div class="min-h-[420px] reveal">
-                    <img src="/images/craftsmanship.svg" alt="Illustrated local footwear craftsmanship scene" class="h-full w-full object-cover">
+                    <img src="/images/craftsmanship.jpg" alt="Inside the Badong Footwear workshop: sandal lasts on wooden racks and cut leather soles on the workbench" class="h-full w-full object-cover">
                 </div>
                 <div class="flex items-center p-8 sm:p-12 lg:p-16 reveal">
                     <div class="max-w-xl">

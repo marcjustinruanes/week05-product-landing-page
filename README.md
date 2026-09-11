@@ -238,13 +238,14 @@ The historical and factual details used to replace generic placeholder copy (fou
 
 ## Product Photography
 
-Every product and category image on the page is a **genuine Badong Footwear photo** — no stock photography or illustrations remain. Three real photos (visible "BADONG GENUINE LEATHER" branding on the insoles), supplied directly by the project owner from their own saved photos of the shop's products, are reused across every image slot the page needs:
+Every product, category, and craftsmanship image on the page is a **genuine Badong Footwear photo** — no stock photography or illustrations remain. Four real photos, supplied directly by the project owner from their own saved photos of the shop, are reused across every image slot the page needs:
 
 | File(s) | Subject |
 |---|---|
-| `shoe-3.jpg`, `hero-shoe.jpg`, `category-heritage.jpg` | Brown Badong Footwear leather slide sandal |
-| `shoe-1.jpg`, `category-slippers.jpg`, `category-casual.jpg` | Black Badong Footwear leather slide sandal |
+| `shoe-3.jpg`, `hero-shoe.jpg`, `category-heritage.jpg` | Brown Badong Footwear leather slide sandal ("BADONG GENUINE LEATHER" branding visible on the insole) |
+| `shoe-1.jpg`, `category-slippers.jpg`, `category-casual.jpg` | Black Badong Footwear leather slide sandal (same branding) |
 | `shoe-2.jpg`, `category-sandals.jpg` | Embellished Badong Footwear sandal (promotional shot) |
+| `craftsmanship.jpg` | Inside the Badong Footwear workshop — sandal lasts on wooden racks and cut leather soles on the workbench, replacing the starter kit's abstract mountain illustration |
 
 Because only three real photos were available, they're deliberately reused across the hero image, all three featured products, and all four category tiles rather than mixed with unrelated stock photography — so the page shows exclusively real Badong Footwear inventory, even at the cost of visual repetition. Product names and categories (Liliw Slide, Signature Slide, Heritage Slide) were renamed to match what's actually photographed, rather than keeping placeholder names like "Leather Shoes" next to a sandal photo.
 
