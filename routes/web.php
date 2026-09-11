@@ -14,9 +14,9 @@ Route::get('/', function () {
         ],
         [
             'name' => 'Fiesta Slippers',
-            'description' => 'A dressed-up pair of leather slippers from Badong\'s collection, finished with embellished detailing.',
+            'description' => 'A dressed-up pair of embellished slippers from Badong\'s collection, finished with statement detailing.',
             'price' => '₱280',
-            'category' => 'Leather Slippers',
+            'category' => 'Embellished Slippers',
             'image' => '/images/shoe-2.jpg',
             'badge' => 'Popular',
         ],
@@ -54,7 +54,7 @@ Route::get('/', function () {
 
     $plans = [
         ['name' => 'Everyday', 'eyebrow' => 'For daily essentials', 'price' => 'From ₱150', 'features' => ['Everyday leather slippers', 'Comfort-focused picks', 'Handmade since 1962'], 'featured' => false],
-        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱280', 'features' => ['Embellished leather slippers', 'Locally sourced materials', 'Statement detailing'], 'featured' => true],
+        ['name' => 'Signature', 'eyebrow' => 'For standout pairs', 'price' => 'From ₱280', 'features' => ['Embellished slippers', 'Statement detailing', 'Dressed-up styles'], 'featured' => true],
         ['name' => 'Heritage', 'eyebrow' => 'For timeless character', 'price' => 'From ₱220', 'features' => ['Made-to-order leather slippers', 'Export-grade craftsmanship', 'Since 1962 on Gat Tayaw Street'], 'featured' => false],
     ];
 
