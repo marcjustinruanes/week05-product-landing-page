@@ -114,9 +114,9 @@
 
                 <div class="reveal">
                     <p class="eyebrow">Featured pair</p>
-                    <h2 id="showcase-name" class="mt-3 font-display text-4xl sm:text-5xl">Liliw Slide</h2>
+                    <h2 id="showcase-name" class="mt-3 font-display text-4xl sm:text-5xl">Liliw Tsinelas</h2>
                     <p class="mt-5 max-w-xl leading-7 text-espresso/60">A flexible presentation component that can later connect to real Laravel product data.</p>
-                    <div class="mt-7 flex items-center gap-3"><span class="text-2xl font-semibold">₱350</span><span class="badge">Featured</span></div>
+                    <div class="mt-7 flex items-center gap-3"><span class="text-2xl font-semibold">₱150</span><span class="badge">Featured</span></div>
 
                     <div class="mt-8">
                         <p class="text-sm font-semibold">Key highlights</p>
