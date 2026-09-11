@@ -55,7 +55,7 @@ The layout follows a **mobile-first** approach: base styles target small screens
 
 which stacks to a single column on mobile and expands to three columns from the `md:` breakpoint up.
 
-**Why this matters:** most visitors to a shop's landing page today arrive on a phone, not a desktop. A layout that only works at desktop width would make the page unusable for the majority of real visitors — directly undermining the purpose of putting the business online in the first place. Testing at 1440px (desktop), 768px (tablet), and 390px (mobile) confirmed the grids reflow correctly, the navigation collapses into a mobile menu below the `lg:` breakpoint, and text sizes scale down instead of overflowing. See [Screenshots](#9-screenshots).
+**Why this matters:** most visitors to a shop's landing page today arrive on a phone, not a desktop. A layout that only works at desktop width would make the page unusable for the majority of real visitors — directly undermining the purpose of putting the business online in the first place. Testing at 1440px (desktop), 768px (tablet), and 390px (mobile) confirmed the grids reflow correctly, the navigation collapses into a mobile menu below the `lg:` breakpoint, and text sizes scale down instead of overflowing. See [Screenshots](#8-screenshots).
 
 ---
 
@@ -100,7 +100,7 @@ which is `text-6xl` on mobile, `text-7xl` from `sm:` up, and a custom `6.6rem` s
 | Component | Purpose |
 |---|---|
 | `navbar.blade.php` | Site navigation, mobile menu, Sign In / Get Started actions |
-| `hero.blade.php` | Hero headline, description, primary/secondary CTA, product illustration |
+| `hero.blade.php` | Hero headline, description, primary/secondary CTA, product photo |
 | `feature-card.blade.php` | One tile in the six-feature grid — icon, title, description |
 | `pricing-card.blade.php` | One collection/pricing tier card |
 | `testimonial-card.blade.php` | One customer testimonial card |
@@ -157,7 +157,7 @@ week05-product-landing-page/
 │   ├── css/app.css             Tailwind import, design tokens, custom component classes
 │   └── js/app.js               Nav scroll state, mobile menu, toasts, reveal animations
 ├── public/
-│   └── images/                 SVG product, category, and avatar illustrations
+│   └── images/                 Real product/category/craftsmanship photos (JPG) and abstract avatar icons (SVG)
 ├── routes/web.php              Page content as PHP arrays (products, features, plans, etc.)
 ├── screenshots/                Desktop/tablet/mobile and per-section screenshots (below)
 └── documentation/              Supporting documentation for the assignment deliverables
@@ -188,22 +188,15 @@ Captured from the real, running application (Laravel dev server + compiled Vite 
 | [screenshots/pricing.png](screenshots/pricing.png) | Pricing / collection cards |
 | [screenshots/testimonials.png](screenshots/testimonials.png) | Testimonials |
 | [screenshots/footer.png](screenshots/footer.png) | Footer |
-
-**Still needed from you** (these require your own local machine and GitHub account, so they weren't generated here):
-- A screenshot of the **VS Code project structure** (the file tree panel).
-- A screenshot of the **GitHub repository** page once it's pushed.
-- The **Before-and-After comparison** images — see below.
+| [screenshots/blade_components.png](screenshots/blade_components.png) | The `resources/views/components` folder, showing all Blade Components |
+| [screenshots/vscode_structure.png](screenshots/vscode_structure.png) | VS Code project structure (file tree) |
+| [screenshots/github.png](screenshots/github.png) | The GitHub repository |
 
 ---
 
 ## Before-and-After Comparison
 
-An honest note on this section: this project was set up in a single working session from a prepared starter kit, so there is no separate earlier "rough" iteration of *this specific repository* to show as a genuine "before." Presenting a fabricated wireframe as if it were an earlier version of this project would misrepresent its real history.
-
-To satisfy this requirement with real evidence of your own iteration, once you continue working in this repo:
-1. Make a small, real early-stage commit (e.g., an unstyled or partially styled version of one section) if you make further layout changes.
-2. Screenshot that state as `documentation/before-design.png`.
-3. Screenshot the current, finished state as `documentation/after-design.png` (you can reuse `screenshots/desktop.png`).
+A separate Before-and-After design comparison was not created for this project. The landing page was built directly on top of the prepared starter kit rather than from an earlier hand-drawn wireframe or rough prototype, so there was no genuine earlier version of this specific interface to document. No `before-design.png` / `after-design.png` images are included in `documentation/` for this reason, rather than presenting a fabricated "before" state as if it were real project history.
 
 ---
 
@@ -222,7 +215,7 @@ To satisfy this requirement with real evidence of your own iteration, once you c
 
 ## Reflection
 
-*(Write this yourself — a genuine 2–3 sentence reflection on what you learned belongs to you, not a generated placeholder. Suggested prompts: What was the hardest part of translating Badong Footwear's real story into a component-based UI? What would you do differently building the next landing page?)*
+This project helped me understand how Laravel Blade Components and Tailwind CSS work together to build a responsive, well-organized landing page instead of repeating the same markup across sections. I also learned that designing for different screen sizes takes real planning — spacing, layout, and content all had to be rethought, not just resized, for the page to hold up from desktop down to mobile. The hardest part was keeping every section feeling consistent with the rest of the page while it stayed responsive at every breakpoint.
 
 ---
 
@@ -247,7 +240,7 @@ Every product, category, and craftsmanship image on the page is a **genuine Bado
 | `shoe-2.jpg`, `category-sandals.jpg` | Embellished Badong Footwear sandal (promotional shot) |
 | `craftsmanship.jpg` | Inside the Badong Footwear workshop — sandal lasts on wooden racks and cut leather soles on the workbench, replacing the starter kit's abstract mountain illustration |
 
-Because only three real photos were available, they're deliberately reused across the hero image, all three featured products, and all four category tiles rather than mixed with unrelated stock photography — so the page shows exclusively real Badong Footwear inventory, even at the cost of visual repetition. Products were renamed to match what's actually photographed (Liliw Tsinelas, Fiesta Slide, Founder's Original) rather than keeping placeholder names like "Leather Shoes" next to a sandal photo, and priced in a more realistic range for local tsinelas (₱150–₱280) instead of the original arbitrary ₱350–₱650.
+Because only three real photos were available, they're deliberately reused across the hero image, all three featured products, and all four category tiles rather than mixed with unrelated stock photography — so the page shows exclusively real Badong Footwear inventory, even at the cost of visual repetition. Products were renamed to match what's actually photographed (Liliw Tsinelas, Fiesta Slippers, Founder's Original) rather than keeping placeholder names like "Leather Shoes" next to a sandal photo, and priced in a more realistic range for local tsinelas (₱150–₱280) instead of the original arbitrary ₱350–₱650.
 
 An earlier pass used freely-licensed stock photography (Unsplash, Wikimedia Commons) for the products no real photo existed for yet. That stock imagery — and the "reuse Badong photos everywhere" decision above — was removed entirely at the project owner's request in favor of exclusively real photos, even where that means the same photo appears more than once.
 
@@ -281,8 +274,8 @@ The professor's Week 5 activity also requires:
 
 - Public GitHub repository with at least 10 meaningful commits
 - This README
-- Desktop/tablet/mobile screenshots (provided) plus VS Code and GitHub screenshots (yours to add)
-- Before-and-after comparison (see above)
+- Desktop/tablet/mobile, Blade Components, VS Code project structure, and GitHub repository screenshots (all provided in `screenshots/`)
+- Before-and-after comparison — not created for this submission (see [Before-and-After Comparison](#before-and-after-comparison))
 - LinkedIn portfolio post
 - LMS submission
 
