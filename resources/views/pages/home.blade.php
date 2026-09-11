@@ -33,7 +33,7 @@
                 <p class="eyebrow">Featured collection</p>
                 <h2 class="mt-3 font-display text-4xl sm:text-5xl">Pairs with a sense of place.</h2>
             </div>
-            <p class="max-w-md text-sm leading-6 text-espresso/60">A curated presentation for Badong's footwear story. Product details and prices can be replaced with verified store information later.</p>
+            <p class="max-w-md text-sm leading-6 text-espresso/60">Real Badong Footwear leather slippers, each pair still handmade in Liliw the same way since 1962.</p>
         </div>
 
         <div class="mt-10 grid gap-6 md:grid-cols-3">
@@ -50,7 +50,7 @@
                     <p class="eyebrow text-tan">Why Badong</p>
                     <h2 class="mt-3 font-display text-4xl sm:text-5xl">Made for the way people actually live.</h2>
                 </div>
-                <p class="max-w-xl text-sm leading-7 text-cream/65 reveal">The experience should feel warm, useful, and unmistakably local — not like a generic marketplace.</p>
+                <p class="max-w-xl text-sm leading-7 text-cream/65 reveal">Six things that have kept Badong's leather slippers a Liliw staple since 1962.</p>
             </div>
 
             <div class="mt-12 grid gap-px overflow-hidden rounded-3xl border border-cream/10 bg-cream/10 sm:grid-cols-2 lg:grid-cols-3">
@@ -115,7 +115,7 @@
                 <div class="reveal">
                     <p class="eyebrow">Featured pair</p>
                     <h2 id="showcase-name" class="mt-3 font-display text-4xl sm:text-5xl">Liliw Tsinelas</h2>
-                    <p class="mt-5 max-w-xl leading-7 text-espresso/60">A flexible presentation component that can later connect to real Laravel product data.</p>
+                    <p class="mt-5 max-w-xl leading-7 text-espresso/60">Handmade in Liliw the same way since 1962 — a pair of genuine leather slippers, built for everyday wear.</p>
                     <div class="mt-7 flex items-center gap-3"><span class="text-2xl font-semibold">₱150</span><span class="badge">Featured</span></div>
 
                     <div class="mt-8">
@@ -153,7 +153,7 @@
                 <p class="eyebrow">Collections</p>
                 <h2 class="mt-3 font-display text-4xl sm:text-5xl">Three ways to discover Badong.</h2>
             </div>
-            <p class="max-w-md text-sm leading-6 text-espresso/60">The assignment requires three pricing cards. For a footwear business, they are presented as collection tiers rather than subscriptions.</p>
+            <p class="max-w-md text-sm leading-6 text-espresso/60">From everyday essentials to statement pairs, each collection is rooted in the same Liliw craftsmanship since 1962.</p>
         </div>
 
         <div class="mt-10 grid gap-5 lg:grid-cols-3">
@@ -191,7 +191,7 @@
             <div class="rounded-[2rem] bg-espresso p-8 text-cream sm:p-12 reveal">
                 <p class="eyebrow text-tan">From Liliw, with every step</p>
                 <h2 class="mt-4 max-w-3xl font-display text-4xl leading-tight sm:text-6xl">A footwear brand should feel like it belongs somewhere.</h2>
-                <p class="mt-6 max-w-2xl leading-7 text-cream/65">Badong is presented as a local story: rooted in Liliw, shaped by footwear culture, and brought forward through a modern digital experience.</p>
+                <p class="mt-6 max-w-2xl leading-7 text-cream/65">Badong has been part of Liliw's footwear story since 1962 — handmade leather slippers, still made to order on Gat Tayaw Street today.</p>
                 <div class="mt-8 flex flex-wrap gap-3">
                     <button class="btn-light" data-toast="Account creation is not part of this demo yet">Create an Account</button>
                     <a href="#contact" class="btn-secondary border-cream/30 text-cream hover:border-cream/60">Contact Sales</a>

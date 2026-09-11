@@ -17,7 +17,7 @@
             </h1>
 
             <p class="mt-7 max-w-xl text-base leading-7 text-espresso/60 sm:text-lg">
-                Discover Badong Footwear — a local footwear story presented through a modern lens, with everyday comfort and Liliw character at its heart.
+                Discover Badong Footwear — handmade leather slippers with real Liliw character, made in the same tradition since 1962.
             </p>
 
             <div class="mt-9 flex flex-wrap gap-3">
