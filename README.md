@@ -1,45 +1,252 @@
-# Week 5 Mini Project — Badong Footwear
+# Badong Footwear — Responsive Product Landing Page
 
-A responsive product landing page concept for Badong Footwear in Liliw, Laguna, built for ITST 302 – Client-Server Technologies.
+**Course:** ITST 302 – Client-Server Technologies · Week 5 · Module 1 – Frontend Development with Laravel
+**Mini Project:** MP04 – Responsive Product Landing Page
+**Stack:** Laravel · Blade Components · Tailwind CSS · Vite · JavaScript
 
-## Technologies
+A responsive product landing page built for **Badong Footwear**, a real, long-running footwear shop on Gat Tayaw Street in Liliw, Laguna — the town widely known as the "Footwear Capital of the Philippines."
 
-- Laravel
-- Blade Components
-- Tailwind CSS
-- Vite
-- JavaScript
-- Responsive Web Design
+---
 
-## Design Concept
+## 1. Introduction
 
-The interface uses a warm editorial palette inspired by leather, wood, sand, and local craftsmanship. The goal is to present Badong as a professional local footwear brand while keeping the visual identity original and distinct from large marketplaces.
+A **product landing page** is a single, focused web page designed to introduce a product or business, communicate its value quickly, and move a visitor toward an action — exploring a catalog, contacting the business, or making a purchase. Unlike a full multi-page site, everything a first-time visitor needs is on one scrollable page: who the business is, what it sells, why it's trustworthy, and how to take the next step.
 
-## Blade Components
+Landing pages matter for small, local businesses in particular. Many, like Badong Footwear, have relied for decades on foot traffic and word of mouth along a physical street. A well-built landing page gives that same business a digital front door — a way to be found, understood, and trusted by someone who has never walked down Gat Tayaw Street.
 
-Required components are implemented under `resources/views/components/`:
+The purpose of this project was to design and build that landing page using Laravel Blade Components and Tailwind CSS, applying component-based architecture and responsive design principles to a real local business rather than a generic template.
 
-- navbar.blade.php
-- hero.blade.php
-- feature-card.blade.php
-- pricing-card.blade.php
-- testimonial-card.blade.php
-- button.blade.php
-- footer.blade.php
+### About the business
 
-Additional reusable components:
+Badong Footwear was founded in **1962** by **Salvador "Badong" Monteiro**, who started the shop at age 16. It still stands on Gat Tayaw Street in Liliw, Laguna, on the former site of Dimasira Footwear. The shop makes shoes, slip-ons, slippers, sandals, and leather footwear for men, women, and children, using raw materials sourced from nearby Biñan, Laguna, with hardware such as buckles imported from Hong Kong. Rather than mass-producing, the shop makes pairs to order and has a documented history of exporting to Hong Kong, Singapore, Hawaii, and New York. The shop is today also known as **B.N. Badong (Bunso ni Badong)**, run by the founder's youngest daughter.
 
-- product-card.blade.php
-- category-card.blade.php
+These facts were gathered through web research (not invented) and are cited under [Business Research & Sources](#business-research--sources) below. Product names, exact prices, and testimonials on the page remain illustrative example content for this school project — see [Important Content Note](#important-content-note).
+
+---
+
+## 2. Objectives
+
+This activity accomplished the following learning objectives:
+
+- Built a fully responsive interface using Tailwind CSS across desktop, tablet, and mobile widths.
+- Created seven required reusable Blade Components (`navbar`, `hero`, `feature-card`, `pricing-card`, `testimonial-card`, `button`, `footer`) plus two additional ones (`product-card`, `category-card`).
+- Applied responsive layouts using Flexbox and CSS Grid throughout the page.
+- Organized the frontend under `resources/views/layouts`, `resources/views/components`, and `resources/views/pages`, following Laravel's Blade conventions.
+- Applied a consistent design system: one color palette, two typefaces, and a shared set of button/card styles reused across every section.
+- Researched and documented a real local business rather than filling the page with an arbitrary or fictional brand.
+
+---
+
+## 3. Responsive Web Design
+
+The layout follows a **mobile-first** approach: base styles target small screens, and larger layouts are layered on with Tailwind's `sm:`, `md:`, and `lg:` breakpoint prefixes, plus two custom breakpoints in [resources/css/app.css](resources/css/app.css) (`900px` and `640px`) for fine-tuning the hero and floating note positions.
+
+**Flexbox** is used for one-dimensional alignment — the navbar's link row, button groups, and card footers all use `flex` with `gap` utilities instead of manual margins. Example, the navbar's desktop link row:
+
+```html
+<div class="hidden items-center gap-7 lg:flex">
+```
+
+**CSS Grid** is used for two-dimensional layouts — the feature grid, product grid, pricing grid, and the hero's two-column split all use `grid` with responsive column counts, for example the product collection grid in [resources/views/pages/home.blade.php](resources/views/pages/home.blade.php):
+
+```html
+<div class="mt-10 grid gap-6 md:grid-cols-3">
+```
+
+which stacks to a single column on mobile and expands to three columns from the `md:` breakpoint up.
+
+**Why this matters:** most visitors to a shop's landing page today arrive on a phone, not a desktop. A layout that only works at desktop width would make the page unusable for the majority of real visitors — directly undermining the purpose of putting the business online in the first place. Testing at 1440px (desktop), 768px (tablet), and 390px (mobile) confirmed the grids reflow correctly, the navigation collapses into a mobile menu below the `lg:` breakpoint, and text sizes scale down instead of overflowing. See [Screenshots](#9-screenshots).
+
+---
+
+## 4. Tailwind CSS
+
+Tailwind CSS is a **utility-first** framework: instead of writing custom class names and separate CSS rules for every element, small single-purpose classes (`flex`, `gap-4`, `rounded-full`, `text-sm`) are composed directly in the markup.
+
+**Advantages used in this project:**
+- **Speed** — building the pricing cards or feature grid took utility composition, not new stylesheet entries.
+- **Consistency** — spacing (`gap-6`, `p-8`), radii (`rounded-[2rem]`), and color opacity modifiers (`text-espresso/65`) stay consistent because they're drawn from the same scale everywhere.
+- **Responsive utilities** — breakpoint prefixes like `sm:`, `md:`, `lg:` let one element declare different behavior per screen size in place, e.g. the hero heading in [resources/views/components/hero.blade.php](resources/views/components/hero.blade.php):
+
+```html
+<h1 class="mt-7 font-display text-6xl leading-[.93] tracking-[-0.04em] sm:text-7xl lg:text-[6.6rem]">
+```
+
+which is `text-6xl` on mobile, `text-7xl` from `sm:` up, and a custom `6.6rem` size from `lg:` up.
+
+**Component styling:** a small set of custom, semantic classes (`.btn-primary`, `.btn-secondary`, `.feature-card`, `.plan-card`, `.testimonial-card`) are defined once in [resources/css/app.css](resources/css/app.css) using Tailwind v4's `@theme` block, so repeated visual patterns (buttons, cards) don't need their full utility class list repeated on every element:
+
+```css
+@theme {
+    --font-sans: "DM Sans", sans-serif;
+    --font-display: "Playfair Display", serif;
+    --color-cream: #f5f0e8;
+    --color-sand: #e6d7c3;
+    --color-espresso: #251b14;
+    --color-tan: #b99b76;
+}
+```
+
+---
+
+## 5. Blade Components
+
+**Blade Components** are reusable, self-contained pieces of a Laravel view — a component is a `.blade.php` file that accepts data through `@props` and can be dropped into any page with a simple `<x-component-name />` tag, the same way a UI framework component works.
+
+**Why they matter:** without components, a navbar or footer used on ten pages means ten copies of the same HTML — a spacing or link fix has to be repeated ten times, and it's easy to miss one. A component fixes that: change [resources/views/components/navbar.blade.php](resources/views/components/navbar.blade.php) once, and every page using `<x-navbar />` updates.
+
+### Components in this project
+
+| Component | Purpose |
+|---|---|
+| `navbar.blade.php` | Site navigation, mobile menu, Sign In / Get Started actions |
+| `hero.blade.php` | Hero headline, description, primary/secondary CTA, product illustration |
+| `feature-card.blade.php` | One tile in the six-feature grid — icon, title, description |
+| `pricing-card.blade.php` | One collection/pricing tier card |
+| `testimonial-card.blade.php` | One customer testimonial card |
+| `button.blade.php` | Generic primary/secondary button wrapper |
+| `footer.blade.php` | Site footer — company info, links, social, address, copyright |
+| `product-card.blade.php` *(bonus)* | One product tile in the featured collection grid |
+| `category-card.blade.php` *(bonus)* | One footwear category tile |
+
+Example — `feature-card.blade.php` accepts a single `feature` array via `@props` and renders it, so the page just loops and passes data:
+
+```php
+@props(['feature'])
+<div class="feature-card">
+    ...
+    <h3 class="mt-7 font-display text-2xl text-cream">{{ $feature['title'] }}</h3>
+    <p class="mt-3 text-sm leading-6 text-cream/55">{{ $feature['description'] }}</p>
+</div>
+```
+
+```blade
+@foreach($features as $feature)
+    <x-feature-card :feature="$feature" />
+@endforeach
+```
+
+All page content flows from [routes/web.php](routes/web.php) as arrays passed to the view — so adding a seventh feature or a fourth pricing tier means editing one array, not touching any markup.
+
+---
+
+## 6. User Interface Design
+
+- **Color palette:** a warm, limited palette defined once as design tokens — cream (`#f5f0e8`), sand (`#e6d7c3`), espresso (`#251b14`), and tan (`#b99b76`) — meant to evoke leather, wood, and sand rather than a generic tech-product blue/purple gradient.
+- **Typography:** two typefaces, loaded from Google Fonts — **Playfair Display** (serif, `.font-display`) for headings, giving an editorial, crafted feel, and **DM Sans** for body text and UI, for clean readability.
+- **Iconography:** inline SVGs (search, bag, menu, feature icons) instead of an icon font, keeping the page dependency-light and every icon crisp at any size.
+- **Button styles:** two consistent variants (`.btn-primary` filled espresso, `.btn-secondary` outlined) reused across every section — hero, pricing cards, CTAs — so a visitor learns the pattern once.
+- **Card design:** feature, pricing, testimonial, and product cards all share rounded corners, consistent padding, and the same hover/shadow language.
+- **Layout consistency:** every section shares the same horizontal gutter (`.shell`, capped at 1180px) and vertical rhythm (`.section-pad`), so the page reads as one system rather than stitched-together blocks.
+
+Together these choices keep the page visually coherent and give it a distinct, local identity rather than resembling a generic SaaS template — directly serving the assignment's requirement to avoid copying existing websites.
+
+---
+
+## 7. Folder Structure
+
+```
+week05-product-landing-page/
+│
+├── app/                        Laravel application code (models, providers)
+├── resources/
+│   ├── views/
+│   │   ├── layouts/            Shared page shell — app.blade.php (head, @vite, @yield)
+│   │   ├── components/         The 9 reusable Blade Components listed above
+│   │   └── pages/               Route-level views — home.blade.php extends the layout
+│   ├── css/app.css             Tailwind import, design tokens, custom component classes
+│   └── js/app.js               Nav scroll state, mobile menu, toasts, reveal animations
+├── public/
+│   └── images/                 SVG product, category, and avatar illustrations
+├── routes/web.php              Page content as PHP arrays (products, features, plans, etc.)
+├── screenshots/                Desktop/tablet/mobile and per-section screenshots (below)
+└── documentation/              Supporting documentation for the assignment deliverables
+```
+
+- **`resources/views/layouts`** holds the one shared HTML shell every page extends with `@extends('layouts.app')`, so `<head>`, meta tags, and asset loading exist in exactly one place.
+- **`resources/views/components`** holds the reusable UI pieces described in [section 5](#5-blade-components).
+- **`resources/views/pages`** holds the actual routed pages — currently just `home.blade.php`.
+- **`public`** is Laravel's web-servable root; product/category artwork lives under `public/images`.
+- **`screenshots`** and **`documentation`** exist purely for this assignment's grading deliverables and aren't part of the running application.
+
+---
+
+## 8. Screenshots
+
+Captured from the real, running application (Laravel dev server + compiled Vite build) using a headless-Chromium script — not mockups.
+
+| File | Shows |
+|---|---|
+| [screenshots/desktop.png](screenshots/desktop.png) | Full page at 1440px |
+| [screenshots/tablet.png](screenshots/tablet.png) | Full page at 768px |
+| [screenshots/mobile.png](screenshots/mobile.png) | Full page at 390px |
+| [screenshots/navbar.png](screenshots/navbar.png) | Navigation bar |
+| [screenshots/hero.png](screenshots/hero.png) | Hero section |
+| [screenshots/features.png](screenshots/features.png) | Features section (6 feature cards) |
+| [screenshots/collection.png](screenshots/collection.png) | Featured product collection |
+| [screenshots/showcase.png](screenshots/showcase.png) | Product showcase with key highlights |
+| [screenshots/pricing.png](screenshots/pricing.png) | Pricing / collection cards |
+| [screenshots/testimonials.png](screenshots/testimonials.png) | Testimonials |
+| [screenshots/footer.png](screenshots/footer.png) | Footer |
+
+**Still needed from you** (these require your own local machine and GitHub account, so they weren't generated here):
+- A screenshot of the **VS Code project structure** (the file tree panel).
+- A screenshot of the **GitHub repository** page once it's pushed.
+- The **Before-and-After comparison** images — see below.
+
+---
+
+## Before-and-After Comparison
+
+An honest note on this section: this project was set up in a single working session from a prepared starter kit, so there is no separate earlier "rough" iteration of *this specific repository* to show as a genuine "before." Presenting a fabricated wireframe as if it were an earlier version of this project would misrepresent its real history.
+
+To satisfy this requirement with real evidence of your own iteration, once you continue working in this repo:
+1. Make a small, real early-stage commit (e.g., an unstyled or partially styled version of one section) if you make further layout changes.
+2. Screenshot that state as `documentation/before-design.png`.
+3. Screenshot the current, finished state as `documentation/after-design.png` (you can reuse `screenshots/desktop.png`).
+
+---
+
+## Problems and Solutions
+
+| Problem | Solution |
+|---|---|
+| `ViteManifestNotFoundException` on first run | Node.js/npm were not installed on the machine, so `public/build/manifest.json` never existed. Installed Node.js LTS, ran `npm install` and `npm run build`. |
+| Leftover unused font plugin in `vite.config.js` | The default Laravel scaffold's `vite.config.js` referenced a Bunny Fonts plugin for a font the design doesn't use (the real design loads DM Sans/Playfair Display via Google Fonts in `app.css`). Removed the unused plugin and rebuilt. |
+| Automated screenshots showed most sections blank | The page uses an `IntersectionObserver`-driven `.reveal` scroll animation (sections start at `opacity: 0` until scrolled into view). A synthetic scroll didn't reliably trigger every element in time for the screenshot. Fixed by having the screenshot script force the `visible` class after scrolling through the page — the same end state a real visitor reaches by scrolling. |
+| Required nav items (Features, Pricing, Testimonials, Sign In, Get Started) were missing | The starter kit's navbar used different labels (Collection, About, Craftsmanship, Stories) and a single CTA button. Updated the navbar to include the required links and both a Sign In and Get Started button. |
+| Rubric asks for SaaS-style CTAs (Register / Contact Sales / Start Free Trial) on a physical retail shop | Adapted rather than forced: "Contact Sales" is genuinely appropriate (Badong does wholesale/export business), "Register" became "Create an Account," and "Start Free Trial" — which has no equivalent for a shoe shop — became "Visit Us in Liliw," since visiting and trying shoes on is the retail equivalent of a trial. |
+
+---
+
+## Reflection
+
+*(Write this yourself — a genuine 2–3 sentence reflection on what you learned belongs to you, not a generated placeholder. Suggested prompts: What was the hardest part of translating Badong Footwear's real story into a component-based UI? What would you do differently building the next landing page?)*
+
+---
+
+## Business Research & Sources
+
+The historical and factual details used to replace generic placeholder copy (founding year, founder, address, materials, export markets) were gathered from public sources, not invented:
+
+- [Badong Footwear: Liliw Laguna's Famous Tsinelas Store](https://liliwtsinelas.com/badong-footwear-liliw-lagunas-famous-tsinelas-store/)
+- [Liliw has a new spring in its step — Inquirer Business](https://business.inquirer.net/230287/liliw-new-spring-step)
+- [MY GULCH: Badong Footwear — Making business for more than 4 decades now](http://mynewgulch.blogspot.com/2007/08/badong-footwear-making-business-for.html)
+- [Manila Shopper: Footwear Shopping in Liliw, Laguna](https://www.manilashopper.com/2012/04/footwear-shopping-at-liliw-laguna.html)
+- [Badong Footwear on Facebook](https://www.facebook.com/badongfootwear/)
+
+## Important Content Note
+
+Product names, exact prices, and testimonials on this page are **illustrative example content** for this school project, not verified, official information from Badong Footwear. Before presenting this page as the shop's real website, replace them with real product names, real prices, and real customer testimonials obtained with permission.
+
+---
 
 ## Run the Project
-
-If you already have the Laravel project created:
 
 ```powershell
 composer install
 npm install
-npm run dev
+npm run build   # or: npm run dev
 ```
 
 In another terminal:
@@ -48,23 +255,16 @@ In another terminal:
 php artisan serve
 ```
 
-Then open:
-
-http://127.0.0.1:8000
-
-## Important Content Note
-
-Some product names, prices, testimonials, and visual assets are demo content for the school project. Replace them with verified information and real photographs from Badong Footwear before presenting them as official business information.
+Then open http://127.0.0.1:8000
 
 ## Required School Documentation
 
 The professor's Week 5 activity also requires:
 
-- Public GitHub repository
-- At least 10 meaningful commits
-- README documentation
-- Desktop/tablet/mobile screenshots
-- Before-and-after comparison
+- Public GitHub repository with at least 10 meaningful commits
+- This README
+- Desktop/tablet/mobile screenshots (provided) plus VS Code and GitHub screenshots (yours to add)
+- Before-and-after comparison (see above)
 - LinkedIn portfolio post
 - LMS submission
 
