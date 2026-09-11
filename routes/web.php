@@ -9,7 +9,7 @@ Route::get('/', function () {
             'description' => 'A handmade slip-on built the same way Badong has made everyday pairs since 1962.',
             'price' => '₱350',
             'category' => 'Slip-Ons',
-            'image' => '/images/shoe-1.svg',
+            'image' => '/images/shoe-1.jpg',
             'badge' => 'Featured',
         ],
         [
@@ -17,7 +17,7 @@ Route::get('/', function () {
             'description' => 'A leather pair made from locally sourced materials, finished with imported buckle hardware.',
             'price' => '₱550',
             'category' => 'Leather Shoes',
-            'image' => '/images/shoe-2.svg',
+            'image' => '/images/shoe-2.jpg',
             'badge' => 'Popular',
         ],
         [
@@ -25,7 +25,7 @@ Route::get('/', function () {
             'description' => 'A made-to-order sandal in the tradition Badong is known for exporting abroad.',
             'price' => '₱650',
             'category' => 'Sandals',
-            'image' => '/images/shoe-3.svg',
+            'image' => '/images/shoe-3.jpg',
             'badge' => 'Signature',
         ],
     ];
@@ -40,10 +40,10 @@ Route::get('/', function () {
     ];
 
     $categories = [
-        ['name' => 'Sandals', 'image' => '/images/category-sandals.svg'],
-        ['name' => 'Slippers', 'image' => '/images/category-slippers.svg'],
-        ['name' => 'Casual Footwear', 'image' => '/images/category-casual.svg'],
-        ['name' => 'Heritage Styles', 'image' => '/images/category-heritage.svg'],
+        ['name' => 'Sandals', 'image' => '/images/category-sandals.jpg'],
+        ['name' => 'Slippers', 'image' => '/images/category-slippers.jpg'],
+        ['name' => 'Casual Footwear', 'image' => '/images/category-casual.jpg'],
+        ['name' => 'Heritage Styles', 'image' => '/images/category-heritage.jpg'],
     ];
 
     $testimonials = [

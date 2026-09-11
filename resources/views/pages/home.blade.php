@@ -103,12 +103,12 @@
             <div class="grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
                 <div class="relative rounded-[2rem] bg-cream p-5 reveal">
                     <div class="aspect-square overflow-hidden rounded-[1.5rem] bg-sand">
-                        <img id="showcase-image" src="/images/shoe-1.svg" alt="Featured Badong footwear" class="h-full w-full object-cover transition duration-500">
+                        <img id="showcase-image" src="/images/shoe-1.jpg" alt="Featured Badong footwear" class="h-full w-full object-cover transition duration-500">
                     </div>
                     <div class="mt-4 grid grid-cols-3 gap-3">
-                        <button class="showcase-thumb rounded-2xl border-2 border-espresso/70 bg-sand p-2" data-image="/images/shoe-1.svg" aria-label="Show first product"><img src="/images/shoe-1.svg" alt="" class="aspect-square w-full rounded-xl"></button>
-                        <button class="showcase-thumb rounded-2xl border border-espresso/10 bg-sand p-2" data-image="/images/shoe-2.svg" aria-label="Show second product"><img src="/images/shoe-2.svg" alt="" class="aspect-square w-full rounded-xl"></button>
-                        <button class="showcase-thumb rounded-2xl border border-espresso/10 bg-sand p-2" data-image="/images/shoe-3.svg" aria-label="Show third product"><img src="/images/shoe-3.svg" alt="" class="aspect-square w-full rounded-xl"></button>
+                        <button class="showcase-thumb rounded-2xl border-2 border-espresso/70 bg-sand p-2" data-image="/images/shoe-1.jpg" aria-label="Show first product"><img src="/images/shoe-1.jpg" alt="" class="aspect-square w-full rounded-xl"></button>
+                        <button class="showcase-thumb rounded-2xl border border-espresso/10 bg-sand p-2" data-image="/images/shoe-2.jpg" aria-label="Show second product"><img src="/images/shoe-2.jpg" alt="" class="aspect-square w-full rounded-xl"></button>
+                        <button class="showcase-thumb rounded-2xl border border-espresso/10 bg-sand p-2" data-image="/images/shoe-3.jpg" aria-label="Show third product"><img src="/images/shoe-3.jpg" alt="" class="aspect-square w-full rounded-xl"></button>
                     </div>
                 </div>
 
